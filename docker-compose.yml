@@ -2,9 +2,9 @@ version: '3.3'
 
 services:
   pg:
-    build: .
+    build: . # built from the Dockerfile in . (current folder)
     volumes:
-      - .:/tmp/pagila-hw
+      - .:/tmp/pagila-hw # bind volume binds our current location into the database
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=pass
